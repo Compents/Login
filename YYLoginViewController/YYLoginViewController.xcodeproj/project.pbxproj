@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E00F00401B2040D200D76F90 /* YYRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00F003F1B2040D200D76F90 /* YYRequest.swift */; };
+		E00F00411B2040D200D76F90 /* YYRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00F003F1B2040D200D76F90 /* YYRequest.swift */; };
 		E0E107A71B1ED7EF00737F4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E107A61B1ED7EF00737F4A /* AppDelegate.swift */; };
 		E0E107A91B1ED7EF00737F4A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E107A81B1ED7EF00737F4A /* ViewController.swift */; };
 		E0E107AC1B1ED7EF00737F4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0E107AA1B1ED7EF00737F4A /* Main.storyboard */; };
@@ -15,6 +17,7 @@
 		E0E107BD1B1ED7EF00737F4A /* YYLoginViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E107BC1B1ED7EF00737F4A /* YYLoginViewControllerTests.swift */; };
 		E0E107C91B1ED83F00737F4A /* YYLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E107C71B1ED83F00737F4A /* YYLoginViewController.swift */; };
 		E0E107CA1B1ED83F00737F4A /* YYLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0E107C81B1ED83F00737F4A /* YYLoginViewController.xib */; };
+		E0E107CC1B1EF1E400737F4A /* YYLoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E107CB1B1EF1E400737F4A /* YYLoginRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E00F003F1B2040D200D76F90 /* YYRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYRequest.swift; sourceTree = "<group>"; };
 		E0E107A11B1ED7EF00737F4A /* YYLoginViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YYLoginViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0E107A51B1ED7EF00737F4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E0E107A61B1ED7EF00737F4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +44,7 @@
 		E0E107BC1B1ED7EF00737F4A /* YYLoginViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYLoginViewControllerTests.swift; sourceTree = "<group>"; };
 		E0E107C71B1ED83F00737F4A /* YYLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYLoginViewController.swift; sourceTree = "<group>"; };
 		E0E107C81B1ED83F00737F4A /* YYLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYLoginViewController.xib; sourceTree = "<group>"; };
+		E0E107CB1B1EF1E400737F4A /* YYLoginRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYLoginRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +65,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E00F003E1B2040AD00D76F90 /* YYRequest */ = {
+			isa = PBXGroup;
+			children = (
+				E00F003F1B2040D200D76F90 /* YYRequest.swift */,
+			);
+			name = YYRequest;
+			path = ../../YYRequest;
+			sourceTree = "<group>";
+		};
 		E0E107981B1ED7EF00737F4A = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +95,7 @@
 		E0E107A31B1ED7EF00737F4A /* YYLoginViewController */ = {
 			isa = PBXGroup;
 			children = (
+				E00F003E1B2040AD00D76F90 /* YYRequest */,
 				E0E107C61B1ED82A00737F4A /* YYLogin */,
 				E0E107A61B1ED7EF00737F4A /* AppDelegate.swift */,
 				E0E107A81B1ED7EF00737F4A /* ViewController.swift */,
@@ -122,6 +137,7 @@
 			children = (
 				E0E107C71B1ED83F00737F4A /* YYLoginViewController.swift */,
 				E0E107C81B1ED83F00737F4A /* YYLoginViewController.xib */,
+				E0E107CB1B1EF1E400737F4A /* YYLoginRequest.swift */,
 			);
 			name = YYLogin;
 			path = ../../YYLogin;
@@ -231,6 +247,8 @@
 				E0E107A91B1ED7EF00737F4A /* ViewController.swift in Sources */,
 				E0E107A71B1ED7EF00737F4A /* AppDelegate.swift in Sources */,
 				E0E107C91B1ED83F00737F4A /* YYLoginViewController.swift in Sources */,
+				E0E107CC1B1EF1E400737F4A /* YYLoginRequest.swift in Sources */,
+				E00F00401B2040D200D76F90 /* YYRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0E107BD1B1ED7EF00737F4A /* YYLoginViewControllerTests.swift in Sources */,
+				E00F00411B2040D200D76F90 /* YYRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +447,7 @@
 				E0E107C21B1ED7EF00737F4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E0E107C31B1ED7EF00737F4A /* Build configuration list for PBXNativeTarget "YYLoginViewControllerTests" */ = {
 			isa = XCConfigurationList;
@@ -436,6 +456,7 @@
 				E0E107C51B1ED7EF00737F4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

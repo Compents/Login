@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>1395E9D6-DBDF-4E03-9429-A60881849CD4</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>YYLoginViewController</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>E21D5BBB26124A7DFEFDB2F78C1269CCDE5730F3</key>
 		<string>https://github.com/Compents/Login.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>YYLoginViewController/YYLoginViewController.xcodeproj/project.xcworkspace</string>
+	<string>YYLoginViewController/YYLoginViewController.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>E21D5BBB26124A7DFEFDB2F78C1269CCDE5730F3</key>

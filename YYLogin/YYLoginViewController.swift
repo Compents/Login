@@ -8,18 +8,36 @@
 
 import UIKit
 
-class YYLoginViewController: UIViewController {
+class YYLoginViewController: UIViewController, UITextFieldDelegate {
 
+    // MARK: - Property
     @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var logoUpConstraint: NSLayoutConstraint!
     
+    // MARK: - Life Cycle
+    deinit {
+        // perform the deinitialization
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillHideNotification, object: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.title = "登录"
+        
+        let keyboardShowSelector: Selector = "keyboardShow"
+        let keyboardHideSelector: Selector = "keyboardHide"
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: keyboardShowSelector, name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: keyboardHideSelector, name: UIKeyboardWillHideNotification, object: nil)
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBarHidden = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,10 +45,57 @@ class YYLoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func loginButtonPressed(sender: UIButton) {
+    // MARK: - response method
+    @IBAction func loginButtonPressed(sender: UIButton?) {
+        
+        YYRequest.startWithRequest()
+        
+        backgroundPressed(sender)
+    }
+    
+    @IBAction func backgroundPressed(sender: AnyObject?) {
+        usernameTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
         
     }
 
+    // MARK: - KeyboardNotification
+    func keyboardShow() {
+        if !self.usernameTextField.isFirstResponder() && !self.passwordTextField.isFirstResponder() {
+            return
+        }
+        logoUpConstraint.constant = 10
+        view.setNeedsUpdateConstraints()
+        
+        UIView.animateWithDuration(0.3, animations: { () -> Void in
+            self.view.layoutIfNeeded()
+        })
+    }
+    
+    func keyboardHid() {
+        if !self.usernameTextField.isFirstResponder() && !self.passwordTextField.isFirstResponder() {
+            return
+        }
+        
+        logoUpConstraint.constant = 124
+        view.setNeedsUpdateConstraints()
+        
+        UIView.animateWithDuration(0.3, animations: { () -> Void in
+            self.view.layoutIfNeeded()
+        })
+    }
+    
+    // MARK: - UITextFieldDelegate
+    // 按回车可以登录
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+        
+        if string == "\n" {
+            loginButtonPressed(nil)
+            return false
+        }
+        return true
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -40,5 +105,4 @@ class YYLoginViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }
