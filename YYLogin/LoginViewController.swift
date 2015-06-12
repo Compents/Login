@@ -48,8 +48,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     // MARK: - response method
     @IBAction func loginButtonPressed(sender: UIButton?) {
         
-//        Request.startWithRequest()
-        
+        LoginRequest.login(usernameTextField.text, password: passwordTextField.text)
         backgroundPressed(sender)
     }
     
