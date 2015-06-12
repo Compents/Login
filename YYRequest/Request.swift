@@ -8,8 +8,9 @@
 
 import Foundation
 
-class YYRequest {
-    class func startWithRequest() {
+class Request {
+    
+    class func startWithRequest(url : String, method : String?, params : [String : String]?) {
         
     }
 }

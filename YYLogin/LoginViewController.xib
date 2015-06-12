@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="YYLoginViewController" customModule="YYLoginViewController" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="YYLoginViewController" customModuleProvider="target">
             <connections>
                 <outlet property="logoImageView" destination="6IK-Sx-ogH" id="LuW-Eo-CWr"/>
                 <outlet property="logoUpConstraint" destination="fEv-xG-QRv" id="NtK-Z8-C47"/>

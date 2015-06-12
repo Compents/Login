@@ -8,10 +8,8 @@
 
 import UIKit
 
-class YYLoginRequestS {
-    
-}
-
-class YYLoginRequest: NSObject {
-   
+class LoginRequest: NSObject {
+    class func login(username: String, password: String) {
+        
+    }
 }

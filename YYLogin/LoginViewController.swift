@@ -8,7 +8,7 @@
 
 import UIKit
 
-class YYLoginViewController: UIViewController, UITextFieldDelegate {
+class LoginViewController: UIViewController, UITextFieldDelegate {
 
     // MARK: - Property
     @IBOutlet weak var logoImageView: UIImageView!
@@ -48,7 +48,7 @@ class YYLoginViewController: UIViewController, UITextFieldDelegate {
     // MARK: - response method
     @IBAction func loginButtonPressed(sender: UIButton?) {
         
-        YYRequest.startWithRequest()
+//        Request.startWithRequest()
         
         backgroundPressed(sender)
     }
@@ -72,7 +72,7 @@ class YYLoginViewController: UIViewController, UITextFieldDelegate {
         })
     }
     
-    func keyboardHid() {
+    func keyboardHide() {
         if !self.usernameTextField.isFirstResponder() && !self.passwordTextField.isFirstResponder() {
             return
         }
