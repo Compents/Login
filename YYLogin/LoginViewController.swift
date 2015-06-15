@@ -16,6 +16,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var logoUpConstraint: NSLayoutConstraint!
     
+    func performOperation(operation :Double -> Double)
+    {
+        
+    }
+    
+    
     // MARK: - Life Cycle
     deinit {
         // perform the deinitialization

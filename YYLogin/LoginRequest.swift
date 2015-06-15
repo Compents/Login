@@ -13,8 +13,10 @@ class LoginRequest: NSObject {
         
         let pushToken = "fefjewioafjaeofja"
         
-        let loginUrlStr = "http:////211.157.160.108/easygtd/v1/user/login.ac"
+        let loginUrlStr = "http://211.157.160.108/easygtd/v1/user/login.ac"
         Request.startWithRequest(loginUrlStr, method: "POST", params: ["phone" : username, "password" : password, "pushToken" : pushToken]) { (data : NSData!, response : NSURLResponse!, error : NSError!) -> Void in
+            
+            let jsonString = NSString(data: data, encoding: NSUTF8StringEncoding)
             
             var err : NSError?
             let result : NSDictionary? = NSJSONSerialization.JSONObjectWithData(data,  options: NSJSONReadingOptions(0), error: &err) as? NSDictionary
