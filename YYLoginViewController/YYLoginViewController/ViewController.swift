@@ -24,7 +24,7 @@ enum Functions {
     func functionViewController() -> UIViewController {
         switch self {
         case .Login:
-            return YYLoginViewController(nibName: "YYLoginViewController", bundle: nil)
+            return LoginViewController(nibName: "LoginViewController", bundle: nil)
         }
     }
     

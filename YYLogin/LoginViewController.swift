@@ -8,13 +8,19 @@
 
 import UIKit
 
-class YYLoginViewController: UIViewController, UITextFieldDelegate {
+class LoginViewController: UIViewController, UITextFieldDelegate {
 
     // MARK: - Property
     @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var logoUpConstraint: NSLayoutConstraint!
+    
+    func performOperation(operation :Double -> Double)
+    {
+        
+    }
+    
     
     // MARK: - Life Cycle
     deinit {
@@ -48,8 +54,16 @@ class YYLoginViewController: UIViewController, UITextFieldDelegate {
     // MARK: - response method
     @IBAction func loginButtonPressed(sender: UIButton?) {
         
-        YYRequest.startWithRequest()
-        
+        LoginRequest.login(usernameTextField.text, password: passwordTextField.text) { (userInfo : NSDictionary?, error : NSError?) -> Void in
+            if let err = error {
+                let alert = UIAlertView(title: "登录失败", message: err.localizedDescription, delegate: nil, cancelButtonTitle: "OK")
+                alert.show()
+            }
+            else {
+                let alert = UIAlertView(title: "登录成功", message: "", delegate: nil, cancelButtonTitle: "OK")
+                alert.show()
+            }
+        }
         backgroundPressed(sender)
     }
     
@@ -72,7 +86,7 @@ class YYLoginViewController: UIViewController, UITextFieldDelegate {
         })
     }
     
-    func keyboardHid() {
+    func keyboardHide() {
         if !self.usernameTextField.isFirstResponder() && !self.passwordTextField.isFirstResponder() {
             return
         }

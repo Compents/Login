@@ -7,17 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E00F00401B2040D200D76F90 /* YYRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00F003F1B2040D200D76F90 /* YYRequest.swift */; };
-		E00F00411B2040D200D76F90 /* YYRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00F003F1B2040D200D76F90 /* YYRequest.swift */; };
+		E00F00401B2040D200D76F90 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00F003F1B2040D200D76F90 /* Request.swift */; };
+		E00F00411B2040D200D76F90 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00F003F1B2040D200D76F90 /* Request.swift */; };
+		E0AB0EDA1B2E75B0008FF3AE /* ResponseDataFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AB0ED91B2E75B0008FF3AE /* ResponseDataFilter.swift */; };
 		E0E107A71B1ED7EF00737F4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E107A61B1ED7EF00737F4A /* AppDelegate.swift */; };
 		E0E107A91B1ED7EF00737F4A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E107A81B1ED7EF00737F4A /* ViewController.swift */; };
 		E0E107AC1B1ED7EF00737F4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0E107AA1B1ED7EF00737F4A /* Main.storyboard */; };
 		E0E107AE1B1ED7EF00737F4A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0E107AD1B1ED7EF00737F4A /* Images.xcassets */; };
 		E0E107B11B1ED7EF00737F4A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0E107AF1B1ED7EF00737F4A /* LaunchScreen.xib */; };
 		E0E107BD1B1ED7EF00737F4A /* YYLoginViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E107BC1B1ED7EF00737F4A /* YYLoginViewControllerTests.swift */; };
-		E0E107C91B1ED83F00737F4A /* YYLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E107C71B1ED83F00737F4A /* YYLoginViewController.swift */; };
-		E0E107CA1B1ED83F00737F4A /* YYLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0E107C81B1ED83F00737F4A /* YYLoginViewController.xib */; };
-		E0E107CC1B1EF1E400737F4A /* YYLoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E107CB1B1EF1E400737F4A /* YYLoginRequest.swift */; };
+		E0E107C91B1ED83F00737F4A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E107C71B1ED83F00737F4A /* LoginViewController.swift */; };
+		E0E107CA1B1ED83F00737F4A /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0E107C81B1ED83F00737F4A /* LoginViewController.xib */; };
+		E0E107CC1B1EF1E400737F4A /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E107CB1B1EF1E400737F4A /* LoginRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E00F003F1B2040D200D76F90 /* YYRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYRequest.swift; sourceTree = "<group>"; };
+		E00F003F1B2040D200D76F90 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		E0AB0ED91B2E75B0008FF3AE /* ResponseDataFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseDataFilter.swift; sourceTree = "<group>"; };
 		E0E107A11B1ED7EF00737F4A /* YYLoginViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YYLoginViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0E107A51B1ED7EF00737F4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E0E107A61B1ED7EF00737F4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -42,9 +44,9 @@
 		E0E107B61B1ED7EF00737F4A /* YYLoginViewControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YYLoginViewControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0E107BB1B1ED7EF00737F4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E0E107BC1B1ED7EF00737F4A /* YYLoginViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYLoginViewControllerTests.swift; sourceTree = "<group>"; };
-		E0E107C71B1ED83F00737F4A /* YYLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYLoginViewController.swift; sourceTree = "<group>"; };
-		E0E107C81B1ED83F00737F4A /* YYLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYLoginViewController.xib; sourceTree = "<group>"; };
-		E0E107CB1B1EF1E400737F4A /* YYLoginRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYLoginRequest.swift; sourceTree = "<group>"; };
+		E0E107C71B1ED83F00737F4A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E0E107C81B1ED83F00737F4A /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		E0E107CB1B1EF1E400737F4A /* LoginRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +70,8 @@
 		E00F003E1B2040AD00D76F90 /* YYRequest */ = {
 			isa = PBXGroup;
 			children = (
-				E00F003F1B2040D200D76F90 /* YYRequest.swift */,
+				E00F003F1B2040D200D76F90 /* Request.swift */,
+				E0AB0ED91B2E75B0008FF3AE /* ResponseDataFilter.swift */,
 			);
 			name = YYRequest;
 			path = ../../YYRequest;
@@ -135,9 +138,9 @@
 		E0E107C61B1ED82A00737F4A /* YYLogin */ = {
 			isa = PBXGroup;
 			children = (
-				E0E107C71B1ED83F00737F4A /* YYLoginViewController.swift */,
-				E0E107C81B1ED83F00737F4A /* YYLoginViewController.xib */,
-				E0E107CB1B1EF1E400737F4A /* YYLoginRequest.swift */,
+				E0E107C71B1ED83F00737F4A /* LoginViewController.swift */,
+				E0E107C81B1ED83F00737F4A /* LoginViewController.xib */,
+				E0E107CB1B1EF1E400737F4A /* LoginRequest.swift */,
 			);
 			name = YYLogin;
 			path = ../../YYLogin;
@@ -223,7 +226,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E0E107CA1B1ED83F00737F4A /* YYLoginViewController.xib in Resources */,
+				E0E107CA1B1ED83F00737F4A /* LoginViewController.xib in Resources */,
 				E0E107AC1B1ED7EF00737F4A /* Main.storyboard in Resources */,
 				E0E107B11B1ED7EF00737F4A /* LaunchScreen.xib in Resources */,
 				E0E107AE1B1ED7EF00737F4A /* Images.xcassets in Resources */,
@@ -246,9 +249,10 @@
 			files = (
 				E0E107A91B1ED7EF00737F4A /* ViewController.swift in Sources */,
 				E0E107A71B1ED7EF00737F4A /* AppDelegate.swift in Sources */,
-				E0E107C91B1ED83F00737F4A /* YYLoginViewController.swift in Sources */,
-				E0E107CC1B1EF1E400737F4A /* YYLoginRequest.swift in Sources */,
-				E00F00401B2040D200D76F90 /* YYRequest.swift in Sources */,
+				E0E107C91B1ED83F00737F4A /* LoginViewController.swift in Sources */,
+				E0E107CC1B1EF1E400737F4A /* LoginRequest.swift in Sources */,
+				E0AB0EDA1B2E75B0008FF3AE /* ResponseDataFilter.swift in Sources */,
+				E00F00401B2040D200D76F90 /* Request.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,7 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0E107BD1B1ED7EF00737F4A /* YYLoginViewControllerTests.swift in Sources */,
-				E00F00411B2040D200D76F90 /* YYRequest.swift in Sources */,
+				E00F00411B2040D200D76F90 /* Request.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,6 +384,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = YYLoginViewController/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-D DEBUG";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -390,6 +395,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = YYLoginViewController/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-D DEBUG";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
