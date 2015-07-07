@@ -10,6 +10,11 @@ import Foundation
 
 class Request {
     
+    class func requestURL(type : String) -> String {
+        let urlString = "http://211.157.160.108/easygtd/v1/user/\(type)"
+        return urlString
+    }
+    
     class func startWithRequest(url : String, method : String?, params : [String : String]?, completionHandler: (NSData! , NSURLResponse!, NSError!) -> Void) {
         
         // create request
@@ -26,7 +31,11 @@ class Request {
             request.setValue("multipart/form-data; boundary=Boundary+\(bodyStrAndBoundary.boundary)", forHTTPHeaderField: "Content-Type")
         }
         
-        var task = NSURLSession.sharedSession().dataTaskWithRequest(request, completionHandler: completionHandler)
+        var task = NSURLSession.sharedSession().dataTaskWithRequest(request, completionHandler: { (data: NSData!, response:NSURLResponse!, error: NSError!) -> Void in
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                completionHandler(data, response, self.errorFilter(error))
+            })
+        })
         
         task.resume()
     }
@@ -51,5 +60,13 @@ extension Request {
         bodyStr += "\r\n--Boundary+\(boundary)--\r\n"
         
         return (bodyStr, boundary)
+    }
+}
+
+// error filter
+extension Request {
+    
+    class func errorFilter(error : NSError?) -> NSError? {
+        return error
     }
 }

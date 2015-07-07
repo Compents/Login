@@ -54,7 +54,16 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     // MARK: - response method
     @IBAction func loginButtonPressed(sender: UIButton?) {
         
-        LoginRequest.login(usernameTextField.text, password: passwordTextField.text)
+        LoginRequest.login(usernameTextField.text, password: passwordTextField.text) { (userInfo : NSDictionary?, error : NSError?) -> Void in
+            if let err = error {
+                let alert = UIAlertView(title: "登录失败", message: err.localizedDescription, delegate: nil, cancelButtonTitle: "OK")
+                alert.show()
+            }
+            else {
+                let alert = UIAlertView(title: "登录成功", message: "", delegate: nil, cancelButtonTitle: "OK")
+                alert.show()
+            }
+        }
         backgroundPressed(sender)
     }
     
